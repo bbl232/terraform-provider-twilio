@@ -1,4 +1,4 @@
-image: gcr.io/tulip-infra/go-mod
+image: gcr.io/tulip-infra/go-builder:3.6.1
 
 services:
   - docker:dind
