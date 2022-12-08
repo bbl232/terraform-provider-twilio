@@ -14,7 +14,13 @@ build:
   stage: build
   script:
     - mkdir -p ./bin/linux_amd64
-    - make tools
+    - GO111MODULE=off go get -u github.com/client9/misspell/cmd/misspell
+    - GO111MODULE=off go get -u github.com/bflad/tfproviderlint/cmd/tfproviderlint
+    - GO111MODULE=off go get -u github.com/katbyte/terrafmt
+    - GO111MODULE=off go get -u github.com/boyter/scc
+    - GO111MODULE=off go get -u golang.org/x/tools/cmd/goimports
+    - goimports -w ./twilio
+    - gofmt -s -w ./twilio
     - CGO_ENABLED=0 GO111MODULE=on GOOS=linux GOARCH=amd64 go build -o ${PWD}/bin/linux_amd64/terraform-provider-twilio
   artifacts:
     paths:
