@@ -8,8 +8,8 @@ import (
 
 	"github.com/RJPearson94/terraform-provider-twilio/twilio/common"
 	"github.com/RJPearson94/terraform-provider-twilio/twilio/utils"
-	"github.com/RJPearson94/twilio-sdk-go/service/conversations/v1/credential"
-	"github.com/RJPearson94/twilio-sdk-go/service/conversations/v1/credentials"
+	"github.com/RJPearson94/twilio-sdk-go/service/chat/v2/credential"
+	"github.com/RJPearson94/twilio-sdk-go/service/chat/v2/credentials"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"

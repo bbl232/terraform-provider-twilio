@@ -1,0 +1,22 @@
+image: gcr.io/tulip-infra/go-mod
+
+services:
+  - docker:dind
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://localhost:2375
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - mkdir -p ./bin/linux_amd64
+    - CGO_ENABLED=0 GO111MODULE=on GOOS=linux GOARCH=amd64 go build -o ${PWD}/bin/linux_amd64/terraform-provider-twilio
+  artifacts:
+    paths:
+      - ./bin/linux_amd64/terraform-provider-twilio
+    expire_in: 3 months
+
