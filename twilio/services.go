@@ -1,4 +1,4 @@
-package twilio
+package twiliov2
 
 import (
 	"github.com/RJPearson94/terraform-provider-twilio/twilio/common"

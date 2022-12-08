@@ -7,6 +7,6 @@ import (
 
 func main() {
 	plugin.Serve(&plugin.ServeOpts{
-		ProviderFunc: twilio.Provider,
+		ProviderFunc: twiliov2.Provider,
 	})
 }
