@@ -63,4 +63,4 @@ require (
 	google.golang.org/protobuf v1.28.0 // indirect
 )
 
-replace github.com/RJPearson94/twilio-sdk-go v0.22.0 => github.com/bbl232/twilio-sdk-go v0.0.0-20221208182803-87c0ef07fb68
+replace github.com/RJPearson94/twilio-sdk-go v0.22.0 => github.com/bbl232/twilio-sdk-go v0.0.0-20221208194905-57296392cde7
